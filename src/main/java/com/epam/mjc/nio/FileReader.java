@@ -21,7 +21,7 @@ public class FileReader {
                 content.append((char) buffer.get());
             }
             String string = content.toString();
-            String[] pairs = string.split("\r\n");
+            String[] pairs = string.split(System.lineSeparator());
             for (int i = 0; i < pairs.length; i++) {
                 pairs[i] = pairs[i].split(": ")[1];
             }
